@@ -33,9 +33,11 @@ in(X, [Y|T]) :- X = Y ; in(X,T).
  * traversed if a path exists from X to Y. This rule calls the visit rule with the given inputs/outputs and
  * returns the result in P.
  */
-path(X,Y,P) :- 
-	visit(X,Y,[X],P).
+path(X,Y) :- connection(X,Y,P),
+ 	format("~a connects to ~a via path ~w",[X , Y, P]).
 
+connection(X,Y,P) :-
+ 	 visit(X,Y,[X],P).
 /** 
  *  Visit takes a start, end, visited list, and output variable (P). Visit then finds all links from the start
  *  node to an intermediary node, X. Visit then checks to make sure that the intermediary node X is not equal

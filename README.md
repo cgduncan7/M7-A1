@@ -2,6 +2,7 @@ M7 ASSIGNMENT README
 ====================
 
 Rules to execute:
+ - path(Start,End). // Outputs the start node, end node, and the path between the two of them.
  - connection(Start,End,Path). // Returns a list of nodes traversed that results in an undirected path from Start to End.
  - path_d(Start,End,Path). // Returns a list of nodes traversed that results in a directed path from Start to End.
 
